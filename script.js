@@ -84,7 +84,7 @@ function add(){
         //Adding function to the save button
   
         save.addEventListener("click", saveBtn);
-      
+
       }
     });
-  }
+  };
