@@ -59,6 +59,22 @@ function add(){
         let inpt = document.createElement("input");
         inpt.value = p.innerHTML;
         li.replaceChild(inpt, p);
+
+        function saveBtn() {
+              p.innerHTML = inpt.value;
+              li.replaceChild(p, inpt);
+              let edd = document.createElement("p");
+              edd.classList.add("edit");
+              edd.innerHTML = "Edit";
+              span.replaceChild(edd, save);
+              edd.addEventListener("click", edFun);
+        }
+        
+        inpt.addEventListener("keypress", (x)=>{
+          if(x.key === "Enter"){
+            return saveBtn();
+          }
+        })
   
         let save = document.createElement("p");
         save.classList.add("save");
@@ -67,15 +83,8 @@ function add(){
   
         //Adding function to the save button
   
-        save.addEventListener("click", () => {
-          p.innerHTML = inpt.value;
-          li.replaceChild(p, inpt);
-          let edd = document.createElement("p");
-          edd.classList.add("edit");
-          edd.innerHTML = "Edit";
-          span.replaceChild(edd, save);
-          edd.addEventListener("click", edFun);
-        });
+        save.addEventListener("click", saveBtn);
+      
       }
     });
   }
