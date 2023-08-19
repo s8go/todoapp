@@ -5,7 +5,7 @@ let label = document.querySelector("#lab");
 
 let name = prompt("Please, input your name");
 
-// adding keypress function to  input
+//adding keypress function to  input
 
 input.addEventListener("keypress",(e)=>{
   let keys = e.key;
