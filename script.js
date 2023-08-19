@@ -47,7 +47,7 @@ function add(){
   
     let edit = document.querySelectorAll(".edit");
   
-    //Adding function to the Edit button
+    // Adding function to the Edit button
   
     edit.forEach((ed) => {
       ed.addEventListener("click", edFun);
